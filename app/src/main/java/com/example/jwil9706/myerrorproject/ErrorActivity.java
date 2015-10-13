@@ -4,16 +4,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.app.Activity;
 
-public class ErrorActivity extends ActionBarActivity
+
+public class ErrorActivity extends Activity
 {
 
-    private Bundle;
     private Button RedButton;
     private Button BlueButton;
     private EditText Text1;
     private EditText RightText;
     private EditText WrongText;
+    private boolean answer;
 
 
 
@@ -28,8 +30,9 @@ public class ErrorActivity extends ActionBarActivity
         RedButton = (Button) findViewById(R.id.RedButton);
         BlueButton = (Button) findViewById(R.id.BlueButton);
         setupListeners();
+        RightText.setVisibility(View.INVISIBLE);
+        WrongText.setVisibility(View.INVISIBLE);
     }
-
 
     private void setupListeners()
     {
@@ -37,13 +40,15 @@ public class ErrorActivity extends ActionBarActivity
         {
             public void onClick(View buttonClickView)
             {
-                if()
+                if(answer == true)
                 {
                     RightText.setVisibility(View.INVISIBLE);
+                    WrongText.setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     WrongText.setVisibility(View.VISIBLE);
+                    RightText.setVisibility(View.INVISIBLE);
                 }
             }
         });
@@ -52,12 +57,14 @@ public class ErrorActivity extends ActionBarActivity
         {
             public void onClick(View buttonClickView)
             {
-                if()
+                if(answer == true)
                 {
                     RightText.setVisibility(View.VISIBLE);
+                    WrongText.setVisibility(View.INVISIBLE);
                 }
                 else
                 {
+                    RightText.setVisibility(View.VISIBLE);
                     WrongText.setVisibility(View.INVISIBLE);
                 }
             }

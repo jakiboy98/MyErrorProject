@@ -6,20 +6,20 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ErrorActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
         android:text="Red"
         android:id="@+id/RedButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
         android:text="Blue"
         android:id="@+id/BlueButton"
-        android:layout_alignTop="@+id/RedButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/RedButton" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,8 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/WrongText"
-        android:layout_below="@+id/Text2"
+        android:text="Wrong"
+        android:layout_below="@+id/RightText"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:text="Wrong" />
+        android:layout_alignEnd="@+id/RightText" />
 </RelativeLayout>
